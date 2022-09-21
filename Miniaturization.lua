@@ -52,6 +52,14 @@ function build()
 	placer()
 end
 
+function positioning()
+	robot.turnLeft()
+	robot.forward()
+	robot.forward()
+	robot.turnLeft()
+	robot.forward()
+	robot.forward()
+
 while robot.count(1)>25 and robot.count(2)>0 and robot.count(3)>0 do
 	robot.turnRight()
 	robot.select(1)
@@ -65,4 +73,11 @@ while robot.count(1)>25 and robot.count(2)>0 and robot.count(3)>0 do
 	robot.turnRight()
 	robot.select(3)
 	robot.suck(1)
-	
+	robot.turnRight()
+	robot.up()
+	robot.up()
+	robot.up()
+	positioning()
+	build()
+	returnhome()
+end
