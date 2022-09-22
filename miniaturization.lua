@@ -59,6 +59,7 @@ function positioning()
 	robot.turnLeft()
 	robot.forward()
 	robot.forward()
+end
 
 while robot.count(1)>25 and robot.count(2)>0 and robot.count(3)>0 do
 	robot.turnRight()
