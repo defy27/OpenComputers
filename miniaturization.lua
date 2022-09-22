@@ -3,7 +3,6 @@ local robot = require("robot")
 function placer()
 	robot.down()
 	robot.down()
-	robot.select(1)
 	robot.placeDown()
 	robot.up()
 	robot.placeDown()
@@ -74,7 +73,7 @@ function returnhome()
 	robot.turnLeft()
 end
 
-while robot.count(1)>25 and robot.count(2)>0 and robot.count(3)>0 do
+while true do
 	robot.turnRight()
 	robot.select(2)
 	robot.suck(1)
@@ -88,14 +87,16 @@ while robot.count(1)>25 and robot.count(2)>0 and robot.count(3)>0 do
 	robot.select(3)
 	robot.suck(1)
 	robot.turnRight()
-	robot.up()
-	robot.up()
-	robot.up()
-	positioning()
-	build()
-	returnhome()
-	robot.down()
-	robot.down()
-	robot.down()
-	os.sleep(3)
+	if robot.count(1)>25 and robot.count(2)>0 and robot.count(3)>0 then
+		robot.up()
+		robot.up()
+		robot.up()
+		positioning()
+		build()
+		returnhome()
+		robot.down()
+		robot.down()
+		robot.down()
+		os.sleep(3)
+	end
 end
