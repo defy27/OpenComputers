@@ -43,17 +43,35 @@ function build()
 	robot.turnLeft()
 	robot.forward()
 	placer()
+	robot.select(3)
+	robot.turnRight()
 	robot.forward()
-	placer()
+	robot.forward()
+	robot.turnAround()
+	robot.drop(1)
+	robot.select(1)
 end
 
 function positioning()
 	robot.turnLeft()
 	robot.forward()
 	robot.forward()
+	robot.forward()
 	robot.turnLeft()
 	robot.forward()
 	robot.forward()
+	robot.forward()
+end
+
+function returnhome()
+	robot.back()
+	robot.turnLeft()
+	robot.forward()
+	robot.forward()
+	robot.forward()
+	robot.forward()
+	robot.forward()
+	robot.turnLeft()
 end
 
 while robot.count(1)>25 and robot.count(2)>0 and robot.count(3)>0 do
@@ -76,4 +94,7 @@ while robot.count(1)>25 and robot.count(2)>0 and robot.count(3)>0 do
 	positioning()
 	build()
 	returnhome()
+	robot.down()
+	robot.down()
+	robot.down()
 end
