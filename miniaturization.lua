@@ -76,14 +76,14 @@ end
 
 while robot.count(1)>25 and robot.count(2)>0 and robot.count(3)>0 do
 	robot.turnRight()
-	robot.select(1)
-	robot.suck(26)
-	if robot.count(1)<26 then
-		robot.suck(26-robot.count(1))
-	end
-	robot.turnRight()
 	robot.select(2)
 	robot.suck(1)
+	robot.turnRight()
+	robot.select(1)
+	robot.suck(robot.space(1))
+	if robot.count(1)<26 then
+		robot.suck(robot.space(1))
+	end
 	robot.turnRight()
 	robot.select(3)
 	robot.suck(1)
@@ -97,4 +97,5 @@ while robot.count(1)>25 and robot.count(2)>0 and robot.count(3)>0 do
 	robot.down()
 	robot.down()
 	robot.down()
+	os.sleep(3)
 end
