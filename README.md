@@ -1,7 +1,6 @@
 # OpenComputers
 robot manual for compact claustrophobia modpack / Minecraft 1.12
 
-a. Miniaturization
 The layout for the robot placement in the miniaturization room is the followinng
   1. choose one of the lower corners
   2. get a fluxduct with a tunnel in this corner
