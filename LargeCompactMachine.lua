@@ -150,7 +150,7 @@ while true do
 	robot.turnRight()
 	robot.select(3)
 	robot.suck(1)
-  if robot.count(1)=64 and robot.count(2)=64 and robot.count(3)>0 then
+  if robot.count(1)==64 and robot.count(2)==64 and robot.count(3)>0 then
     robot.turnRight()
     robot.up()
     robot.up()
