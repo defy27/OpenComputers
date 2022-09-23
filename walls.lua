@@ -39,10 +39,11 @@ while true do
 	robot.select(2)
 	robot.suck(2)
   if robot.count(2)<2 then
-    	robot.suck(2)
+    robot.suck(2)
   end
+	robot.turnAround()
 	if robot.count(1)>0 and robot.count(2)>1 then
-    		robot.up()
+		robot.up()
 		positioning()
 		build()
 		returnhome()
