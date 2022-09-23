@@ -131,6 +131,7 @@ function returnhome()
 	robot.forward()
 	robot.forward()
 	robot.forward()
+	robot.forward()
 	robot.turnLeft()
 end
 
@@ -153,12 +154,14 @@ while true do
   if robot.count(1)==64 and robot.count(2)==64 and robot.count(3)>0 then
     robot.turnRight()
     robot.up()
+		robot.up()
     robot.up()
     robot.up()
     positioning()
     build()
     returnhome()
     robot.down()
+		robot.down()
     robot.down()
     robot.down()
   end
