@@ -48,5 +48,6 @@ while true do
 		build()
 		returnhome()
 		robot.down()
+		robot.down()
 	end
 end
