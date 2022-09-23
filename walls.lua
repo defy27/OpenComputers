@@ -1,14 +1,14 @@
 local robot = require("robot")
 
 function build()
-  robot.select(1)
+	robot.select(1)
 	robot.placeDown()
 	robot.up()
-  robot.select(2)
+	robot.select(2)
 	robot.placeDown()
-  robot.back()
-  robot.back()
-  robot.drop(1)
+	robot.back()
+	robot.back()
+	robot.drop(1)
 end
 
 function positioning()
@@ -39,10 +39,10 @@ while true do
 	robot.select(2)
 	robot.suck(2)
   if robot.count(2)<2 then
-    robot.suck(2)
+    	robot.suck(2)
   end
 	if robot.count(1)>0 and robot.count(2)>1 then
-    robot.up()
+    		robot.up()
 		positioning()
 		build()
 		returnhome()
