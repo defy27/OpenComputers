@@ -164,5 +164,6 @@ while true do
 		robot.down()
     robot.down()
     robot.down()
+		os.sleep(20)
   end
 end
